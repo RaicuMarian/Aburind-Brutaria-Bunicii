@@ -1,0 +1,447 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fbeec1;
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    font-family: system-ui, helvetica, arial;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+    
+
+/*Meniu*/
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(minmax(200px , 1fr));
+    grid-template-rows: 1fr;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .navbar img {
+    height: 100px;
+    width: auto;
+    justify-self: start;
+    margin-left: 20px;
+  }
+
+  .navbar a{
+      grid-row-start: 1;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-start: 1;
+    justify-self: end;
+    align-items: center;
+  }
+  
+  .nav li:hover{
+      background-color: none;
+  }
+
+  .nav-item a {
+      color:black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.05s ease-out;
+  }
+  
+  .nav-item a:hover {
+    color: #3498db;
+  }
+
+
+/* Slideshow */
+
+.item{
+    height: 100vh;
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Despre noi */
+
+.despreNoi{
+    background-color: #d0ceba;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    padding: 25px;
+    margin: 50px;
+}
+
+.info{
+    font-size: 1.6em;
+}
+
+.info > h1{
+    padding-bottom: 30px;
+}
+
+/* Centrare imagine */
+.infoImage{
+    display: grid;
+}
+
+.infoImage > img{
+    margin: auto;
+}
+/* Sfarsit centrare imagine */
+
+
+.infoImage > img{
+   width: 100%;
+   height: auto;
+}
+
+/* Comenzi */ 
+
+.bottom{
+    display: grid;
+    background-color: #d0ceba;
+    padding: 25px;
+    padding-bottom: 0;
+    margin: 50px;
+    height: 50%;
+    border-bottom: black dashed 2px;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+}
+
+.bottom1{
+    display: grid;
+}
+
+.bottom2{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.comenzi > h1{
+    padding-bottom: 30px;
+}
+
+.transport > h4{
+    padding-bottom: 20px;
+}
+
+.button{
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #d0ceba;
+    background-color: #262322 ;
+    color: #d0ceba;
+}
+
+.button:hover{
+    background-color: #3498db;
+    color:black;
+    
+}
+
+.transportImage{
+    width: 150px;
+    height: auto;
+    animation-name: roadTrip;
+    animation-duration: 4s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+.transportStyle{
+    width: 150px;
+    height: auto;
+}
+
+#imgVan{
+    width: 150px;
+    height: auto;
+}
+
+/* Comenzi Animatie */
+
+@keyframes roadTrip{
+    from { left: 0; }
+  to {
+    left: 100%;
+    transform: translateX(+700%);
+  }
+}
+
+/* Formular */
+
+#formElement{
+    background-color: #262322;
+    padding: 50px 100px 30px 15px;
+    margin-bottom: 10px;
+    color: burlywood;
+}
+
+#butonFormular{
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    border: 1px solid #d0ceba;
+    background-color: #d0ceba ;
+    color: #262322;
+    outline: none;
+    border-radius: 5px;
+}
+
+#butonFormular:hover{
+    background-color: #3498db;
+    color:black;
+}
+
+/* Unde ne gasiti? */
+
+.details{
+    background-color: #d0ceba;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    padding: 25px;
+    margin: 50px;
+    justify-items: center;
+    align-items: top;
+}
+
+.details > h1{
+    padding-bottom: 30px;
+}
+
+/* Pagina cu ingrediente ---------------------------------------------------------------------------------------------------------------*/
+
+.containerI{
+    background-color: #6d6686;
+    background-image: url("https://transparenttextures.com/patterns/soft-kill.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+}
+
+.descriere{
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 15px;
+    background-color: #fbeec1;
+}
+
+.descriere > p{
+    line-height: 1.5;
+    font-size: 1.3rem;
+    margin-top: 50px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    grid-gap: 15px;
+    margin: 25px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #fbeec1;
+  }
+  
+  .card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card > img {
+      height: 200px;
+      width: auto;
+  }
+
+  .container {
+    padding: 2px 16px;
+  }
+
+  .cuptor{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding: 15px;
+  }
+
+  .imagineCuptor > img{
+      width: 100%;
+      height: auto;
+  }
+
+  .descriereCuptor{
+      padding: 10px;
+      margin: 0 5px 0 5px;
+      display: grid;
+      align-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+/* Cariere ---------------------------------------------------------------------------------------------------------------------------------- */
+
+.descriereCariere{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
+.albums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin: 10px;
+  }
+
+  .album {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    color: black;
+
+  }
+
+  .album__artwork {
+    width: 100%;
+  }
+
+  .album__details{
+    width: 100%;
+  }
+
+  /* Buton Joburi */
+  .aplicaJob{ 
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: 1px solid #262322;
+    background-color: #d0ceba ;
+    color: #262322;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .aplicaJob:hover{
+    background-color: #3498db;
+    color:black; 
+  }
+
+
+  /* Footer -------------------------------------------------------------------------------------------------------------------------------------- */
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #6d6686;
+    color: white;
+    text-align: center;
+ }
+
+/* Umbra Elemente ---------------------------------------------------------------------------------------------------------------------------- */
+
+.umbra{
+        position:relative;
+        -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+           -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+    .umbra:before, .umbra:after
+    {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+        box-shadow:0 0 20px rgba(0,0,0,0.8);
+        top:10px;
+        bottom:10px;
+        left:0;
+        right:0;
+        -moz-border-radius:100px / 10px;
+        border-radius:100px / 10px;
+    }
+    .umbra:after
+    {
+        right:10px;
+        left:auto;
+        -webkit-transform:skew(8deg) rotate(3deg);
+           -moz-transform:skew(8deg) rotate(3deg);
+            -ms-transform:skew(8deg) rotate(3deg);
+             -o-transform:skew(8deg) rotate(3deg);
+                transform:skew(8deg) rotate(3deg);
+    }
+
+/* Media */
+
+@media(max-width: 768px){
+
+    .item .container{
+        height: 50vh;
+        width: auto;
+    }
+
+    .active{
+        height: auto;
+    }
+
+    .despreNoi, .bottom, .details{
+        margin: 10px 1px 10px 1px;
+        padding: 0 15px;
+    }
+
+    .transportImage > img{
+        width: 50px;
+        height: auto;
+    }
+
+    #formElement{
+        border-top: 2px dashed white;
+    }
+
+    .bottom{
+        border-bottom: none;
+    }
+
+    .navbar ul {
+        grid-template-columns: repeat(auto-fit, minmax(200px , 1fr)) ;
+    }
+
+    .nav-item a{
+        font-size: 0.6rem;
+    }
+
+    .navbar img{
+        margin: 0;
+        padding: 0;
+    }
+
+
+}
+
